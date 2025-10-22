@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>PROFIL-ME</title>
+  </head>
+
+  <!-- #NAVIGASI -->
+  <body>
+    <header>
+      <div class="menu-toggle" id="menu-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <nav>
+        <a href="#home" class="nav-link">HOME</a>
+        <a href="#experiences" class="nav-link">EXPERIENCE</a>
+        <a href="#skills" class="nav-link">SKILLS</a>
+        <a href="#contact" class="nav-link">CONTACT</a>
+      </nav>
+    </header>
+
+    <script>
+      // --- SCRIPT UNTUK SCROLL ACTIVE MENU ---
+      const sections = document.querySelectorAll("section");
+      const navLinks = document.querySelectorAll("nav a");
+
+      window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach((section) => {
+          const sectionTop = section.offsetTop - 80; // jarak trigger
+          const sectionHeight = section.clientHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+          }
+        });
+
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.getAttribute("href") === `#${current}`) {
+            link.classList.add("active");
+          }
+        });
+      });
+
+      // --- SCRIPT UNTUK TOGGLE MENU MOBILE ---
+      const menuToggle = document.getElementById("menu-toggle");
+      const nav = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+
+    <!-- #HOME SESION -->
+    <section id="home" class="home">
+      <!-- #KIRI -->
+      <div class="home-content">
+        <h1>Hi, It's <span>Audiya Putri</span></h1>
+        <h3 class="typing-text">I'm a<span> MAHASISWI</span></h3>
+        <p>
+          “Welcome to my blog! My name is <b>Audiya Putri Ramadhani</b>, but you
+          can call me <b>Ody</b>. I am a student at
+          <i>Universitas Islam Balitar</i>, located in <i>Blitar City</i>, from
+          the <i>Faculty of Engineering and Informatics</i>,
+          <i>Informatics Engineering Study Program</i>, and I am currently in my
+          <i>third semester</i>. Here, I share various experiences, skills, and
+          insights about the things I’m passionate about and enjoy exploring.
+          Feel free to explore this blog
+          <b>— I hope you find something interesting!</b>”
+        </p>
+      </div>
+
+      <!-- #KANAN -->
+      <div class="home-img">
+        <img src="image/audy.jpg" alt="home-img" />
+      </div>
+    </section>
+
+    <!-- #EXPERIENCE SESION -->
+    <section id="experiences" class="experiences">
+      <div class="exp-content">
+      <h1>MY <span><b>EXPERIENCE</b></span></h1>
+      <h2>—  “Every experience, good or bad, shapes the person I am becoming.” —</h2><br>
+      
+      <div class="exp-card">
+        <h4><br>KARYAWAN CV. JAYA ABADI (TOKO AMAN) | NOV 2024 - SEKARANG</h4>
+      <p>
+        Selama bekerja saya bertanggung jawab dalam melayani pelanggan secara langsung
+        maupun melalui media online dengan ramah. Saya juga memproses dan menyiapkan pesanan yang masuk
+        agar ditangani dengan cepat & tepat. Untuk pesana yang memerlukan pengiriman, saya membuat 
+        surat jalan sebagai pendukung dokumen pengiriman. Selain itu, bertugas menerima dan memeriksa barang datang.
+        Tidak hanya itu saya juga melakukan display produk di toko agar terlihat rapi, bersih, dan menarik serta
+        mengelola stock barang untuk memastikan ketersediaan selalu terjaga.
+      </p>
+      </div>
+
+      <div class="exp-card">
+        <h4><br>KETUA PRADANI SMK PGRI 3 BLITAR | </h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero officiis veritatis aspernatur architecto vitae assumenda odit tempora dolore perspiciatis eveniet, eos autem, quos iure natus voluptate quam, ipsum minima! Possimus?
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <h4><br>SEKRETARIS OSIS SMK PGRI 3 BLITAR | </h4>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla impedit magni officiis! Explicabo assumenda aliquid fugit earum? Quo enim nam adipisci. Quo sit eum deserunt tempora, exercitationem corrupti? Blanditiis, corrupti?
+        </p>
+      </div>
+
+      <div class="exp-card">
+        <h4><br>PKL — KEL. SENTUL & KEL. KEPANJENKIDUL | </h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum officiis aliquid dolore maxime minus dolorem at quisquam eius deserunt impedit, eum rerum, sequi libero omnis. Modi ab dolore optio atque.
+        </p>
+      </div>
+    </section>
+
+  <!-- #SKILL SESION -->
+<section id="skills" class="skills">
+  <div class="skills-content">
+    <h1>MY <span><b>SKILLS</b></span></h1>
+    <h2>— “Learning never exhausts the mind.” —</h2><br>
+
+    <div class="skills-container">
+      <div class="skill-card">
+        <img src="image/html.png" alt="HTML Logo" />
+      </div>
+
+      <div class="skill-card">
+        <img src="image/css.png" alt="CSS Logo" />
+      </div>
+
+      <div class="skill-card">
+        <img src="image/logo.canva.png" alt="Canva Logo" />
+      </div>
+
+      <div class="skill-card">
+        <img src="image/ms.ofc.png" alt="Microsoft Office Logo" />
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- #CONTACT SESION -->
+<section id="contact" class="contact">
+  <div class="contact-content">
+    <h1>SOSIAL <span><b>MEDIA</b></span></h1>
+      <h2>“Let’s create something amazing together ✨”</h2>
+      <div class="social-icons">
+        <!-- #GMAIL -->
+        <a href="mailto:audiyaaaptr@gmail.com"
+          ><i class="fa-solid fa-envelope"></i
+        ></a>
+        <!-- #IG -->
+        <a href="https://www.instagram.com/bananamatchalattea/"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <!-- #GITHUB -->
+        <a href="https://github.com/Audiyaputri"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+      <a href="https://wa.me/6285708273233" class="btn" target="_blank"
+        >CONTACT ME</a
+      >
+    </section>
+  </body>
+</html>
