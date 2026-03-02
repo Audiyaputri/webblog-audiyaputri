@@ -1,187 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <title>PROFIL-ME</title>
-  </head>
-
+    <title>Portofolio-Audiya</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    ></script>
+  <script src="script.js"></script>
+  </head>  
   <!-- #NAVIGASI -->
   <body>
-    <header>
-      <div class="menu-toggle" id="menu-toggle">
-        <i class="fa-solid fa-bars"></i>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><b>iƬ'Ƨ—ꪮᦔꪗꪗ</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" fdprocessedid="i7mx9">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="experience.html">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          </form>
+        </div>
       </div>
-
-      <nav>
-        <a href="#home" class="nav-link">HOME</a>
-        <a href="#experiences" class="nav-link">EXPERIENCE</a>
-        <a href="#skills" class="nav-link">SKILLS</a>
-        <a href="#contact" class="nav-link">CONTACT</a>
-      </nav>
-    </header>
-
-    <script>
-      // --- SCRIPT UNTUK SCROLL ACTIVE MENU ---
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll("nav a");
-
-      window.addEventListener("scroll", () => {
-        let current = "";
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 80; // jarak trigger
-          const sectionHeight = section.clientHeight;
-          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-            current = section.getAttribute("id");
-          }
-        });
-
-        navLinks.forEach((link) => {
-          link.classList.remove("active");
-          if (link.getAttribute("href") === `#${current}`) {
-            link.classList.add("active");
-          }
-        });
-      });
-
-      // --- SCRIPT UNTUK TOGGLE MENU MOBILE ---
-      const menuToggle = document.getElementById("menu-toggle");
-      const nav = document.querySelector("nav");
-
-      menuToggle.addEventListener("click", () => {
-        nav.classList.toggle("active");
-      });
-    </script>
-
+    </nav>
     <!-- #HOME SESION -->
     <section id="home" class="home">
       <!-- #KIRI -->
       <div class="home-content">
-        <h1>Hi, It's <span>Audiya Putri</span></h1>
-        <h3 class="typing-text">I'm a<span> MAHASISWI</span></h3>
-        <p>
-          “Welcome to my blog! My name is <b>Audiya Putri Ramadhani</b>, but you
-          can call me <b>Ody</b>. I am a student at
-          <i>Universitas Islam Balitar</i>, located in <i>Blitar City</i>, from
-          the <i>Faculty of Engineering and Informatics</i>,
-          <i>Informatics Engineering Study Program</i>, and I am currently in my
-          <i>third semester</i>. Here, I share various experiences, skills, and
-          insights about the things I’m passionate about and enjoy exploring.
-          Feel free to explore this blog
-          <b>— I hope you find something interesting!</b>”
-        </p>
+        <h1>Hi, I'm<span> Audiya Putri</span></h1>
+        <h3 class="typing-text">
+          An Informatics<span> Engineering Student</span>
+        </h3>
+        <p id="typing-text">
+      Welcome to my blog! My name is Audiya Putri Ramadhani, but you
+      can call me Ody. I am a student at Universitas Islam Balitar,
+      located in Blitar City, from the Faculty of Engineering and Informatics,
+      Informatics Engineering Study Program, and I am currently in my
+      four semester. Here, I share various experiences, skills, and
+      insights about the things I’m passionate about and enjoy exploring.
+      Feel free to explore this blog — I hope you find something interesting!
+    </p>
       </div>
 
       <!-- #KANAN -->
       <div class="home-img">
-        <img src="audy.jpg" alt="home-img" />
+        <img src="img/audy.jpg" alt="home-img" />
       </div>
-    </section>
-
-    <!-- #EXPERIENCE SESION -->
-    <section id="experiences" class="experiences">
-      <div class="exp-content">
-      <h1>MY <span><b>EXPERIENCE</b></span></h1>
-      <h2>—  “Every experience, good or bad, shapes the person I am becoming.” —</h2><br>
-      
-      <div class="exp-card">
-        <h4><br>KARYAWAN CV. JAYA ABADI (TOKO AMAN) | Nov 2024 - Sekarang</h4>
-      <p>
-        Selama bekerja saya bertanggung jawab dalam melayani pelanggan secara langsung
-        maupun melalui media online dengan ramah. Saya juga memproses dan menyiapkan pesanan yang masuk
-        agar ditangani dengan cepat & tepat. Untuk pesana yang memerlukan pengiriman, saya membuat 
-        surat jalan sebagai pendukung dokumen pengiriman. Selain itu, bertugas menerima dan memeriksa barang datang.
-        Tidak hanya itu saya juga melakukan display produk di toko agar terlihat rapi, bersih, dan menarik serta
-        mengelola stock barang untuk memastikan ketersediaan selalu terjaga.
-      </p>
-      </div>
-
-      <div class="exp-card">
-        <h4><br>KETUA PRADANI SMK PGRI 3 BLITAR | Tahun 2023-2024</h4>
-        <p>
-          Sebagai Pradana Putri, saya mengelola program kerja tahunan, bulanan, dan mingguan, 
-          serta memimpin rapat koordinasi bersama seluruh anggota. Saya juga berperan dalam 
-          menyelesaikan berbagai kegiatan dan permasalahan yang terjadi selama periode kepemimpinan. 
-          Peran ini melatih kemampuan kepemimpinan, kerjasama tim, 
-          dan pengambilan keputusan dengan cepat dan tepat.
-        </p>
-      </div>
-
-      <div class="exp-card">
-        <h4><br>SEKRETARIS OSIS SMK PGRI 3 BLITAR | Tahun 2023-2024</h4>
-        <p>
-          Dalam posisi sebagai Sekretaris OSIS, saya menulis, mengetik, serta mengarsipkan surat 
-          dan proposal kegiatan. Saya juga berkoordinasi dengan pengurus lain untuk memastikan program kerja berjalan 
-          lancar dan kebutuhan administrasi terpenuhi. 
-          Selain itu, saya mengelola seluruh dokumen organisasi, baik dalam bentuk fisik maupun digital. 
-          Pengalaman ini memperkuat kemampuan manajemen waktu, administrasi, dan tanggung jawab saya.
-        </p>
-      </div>
-
-      <div class="exp-card">
-        <h4><br>PKL — KEL. SENTUL & KEL. KEPANJENKIDUL | Sept-Nov 2022 & Feb-Mei 2023</h4>
-        <p>
-          Selama melaksanakan PKL di Kantor Kelurahan Sentul dan Kantor Kelurahan Kepanjen Kidul, 
-          saya bertugas memberikan pelayanan umum kepada masyarakat, membantu pembuatan surat-surat keterangan, 
-          serta mengarsipkan surat masuk dan surat keluar. Pengalaman ini mengajarkan saya pentingnya ketelitian, 
-          tanggung jawab, dan komunikasi yang baik dalam pelayanan publik.
-        </p>
-      </div>
-    </section>
-
-  <!-- #SKILL SESION -->
-<section id="skills" class="skills">
-  <div class="skills-content">
-    <h1>MY <span><b>SKILLS</b></span></h1>
-    <h2>— “Learning never exhausts the mind.” —</h2><br>
-
-    <div class="skills-container">
-      <div class="skill-card">
-        <img src="html.png" alt="HTML Logo" />
-      </div>
-
-      <div class="skill-card">
-        <img src="css.png" alt="CSS Logo" />
-      </div>
-
-      <div class="skill-card">
-        <img src="logo.canva.png" alt="Canva Logo" />
-      </div>
-
-      <div class="skill-card">
-        <img src="ms.ofc.png" alt="Microsoft Office Logo" />
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- #CONTACT SESION -->
-<section id="contact" class="contact">
-  <div class="contact-content">
-    <h1>SOSIAL <span><b>MEDIA</b></span></h1>
-      <h2>“Let’s create something amazing together ✨”</h2>
-      <div class="social-icons">
-        <!-- #GMAIL -->
-        <a href="mailto:audiyaaaptr@gmail.com"
-          ><i class="fa-solid fa-envelope"></i
-        ></a>
-        <!-- #IG -->
-        <a href="https://www.instagram.com/bananamatchalattea/"
-          ><i class="fa-brands fa-instagram"></i
-        ></a>
-        <!-- #GITHUB -->
-        <a href="https://github.com/Audiyaputri"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-      </div>
-      <a href="https://wa.me/6285708273233" class="btn" target="_blank"
-        >CONTACT ME</a
-      >
     </section>
   </body>
 </html>
